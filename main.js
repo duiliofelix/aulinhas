@@ -1,23 +1,24 @@
+let alunos = ["Leo 1", "Leo 2", "Van", "Fany", "Robinho"]
 
-let meuTexto = "testa"
-
-let meuNumero = 12453
-
-let meuBooleano = false
-
-let minhaLista = ["a", "b", "c", "d", "e", "f"]
-
-let meuObjeto = {
-    nome: "texto",
-    idade: 20
+for (let indice = 0; indice < alunos.length; indice += 1) {
+    console.log("O nome do aluno é " + alunos[indice])
 }
 
+const meuInput = document.querySelector('.search-input')
+const meuBtn = document.querySelector('button')
 
-alert(meuTexto)
-alert(meuNumero)
-alert(meuBooleano)
-alert(minhaLista[4])
-alert(meuObjeto.nome)
+let valorDoTexto
+meuInput.addEventListener('keyup', (event) => {
+    valorDoTexto = event.target.value
+})
 
-// descobrir o que if e for fazem
-// armazenar o valor do texto digitado na barrinha de busca em uma variavel
+meuBtn.addEventListener('click', () => {
+    if (valorDoTexto % 2 == 0) {
+        console.log('é par')
+    } else {
+        console.log('é ímpar')
+    }
+})
+
+
+// Verificar se o valorDoTexto é de fato um número
